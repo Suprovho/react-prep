@@ -1,0 +1,39 @@
+But how does it all work behind the scenes?
+
+summary->
+
+When you create elements in React, you're actually creating
+virtual DOM objects. These virtual replicas are synced with the
+real DOM, a process known as "Reconciliation" or the React
+"diffing" algorithm.
+Essentially, every rendering cycle compares the new UI blueprint
+(updated VDOM) with the old one (previous VDOM) and makes
+precise changes to the actual DOM accordingly.
+
+
+
+reconciliation Algorithm -> also known as react fiber(react 16)
+
+virtual dom is the representation of the actual dom.
+
+virtual dom is a normal js object  which contain react elements.
+
+diff algorithm find the difference between previous virtual dom and present virtual dom ex- on click on a button state changes such as from 4 card to 3 card 
+
+and then it will update the actual dom with difference on every render cycle.
+
+it find the diff between 2 object and change actual dom and rerender which update the ui.
+
+why react is fast ?
+
+because it do efficient dom manipulation. by finding the difference between virtual dom and update the ui. 
+
+th's why in use state we have two ele 2nd one keep the track and as soon as it is called it process reconciliation algorithm
+
+- The crucial point about State variables is that
+whenever they update, React triggers a reconciliation
+cycle and re-renders the component.
+
+- This means that as soon as the data layer changes,
+React promptly updates the UI layer. The data layer is
+always kept in sync with the UI layer. 
