@@ -34,3 +34,77 @@
   border: 2px solid black;
   padding: 6px;
 }
+
+.box{
+  display: grid;
+  max-width: 300px;
+  width: 100%;
+  padding: 20px;
+  gap: 20px;
+  border: 2px solid #000;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+  }
+    
+  .cell {
+    background-color: transparent;
+    border: 2px solid #000;
+    height: 0;
+    padding-bottom: 100%;
+  }
+  .cell-activated {
+    background-color: green;
+  }
+
+  .game{
+    max-width: calc(3 * 100px);
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .status{
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+
+  .board{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cell {
+    width: 100px;
+    height: 100px;
+    font-size: 36px;
+    border: 2px solid grey;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    padding: 20px;
+  }
+
+  .cell:hover {
+    background-color: #f0f0f0;
+  }
+
+  .reset-button {
+    border-radius: 8px;
+    padding: 5px 8px;
+    border: 2px solid black;
+  }
+
+  .reset-button:hover{
+    background-color: #000;
+    color: #f0f0f0;
+  }

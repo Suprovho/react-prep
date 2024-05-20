@@ -1,0 +1,3 @@
+by using modular approach our code become maintainable,reusable and testable.
+
+using srp(single responsibility principle);

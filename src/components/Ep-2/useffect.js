@@ -2,7 +2,10 @@
 
 import React, { useState } from "react";
 import { useEffect } from "react";
-import Card from "./card";
+import Card, { Hoc } from "./card";
+import { Link } from "react-router-dom";
+import useOnlineStatus from "../../utils/useOnlineStatus";
+import { useDispatch, useSelector } from "react-redux";
 
 
 // ‘ useEffect() ’ is a Hook React provides
@@ -34,12 +37,14 @@ import Card from "./card";
 
 // don,t use state variable inside if else,loops and normal functions.
 
-
-
 const UseEffect = () => {
   const [jobValue, setJobValue] = useState([]);
   const [filteredSearch, setFilteredSearch] = useState([]);
   const [searchText, setSearchText] = useState("");
+
+  const PromotedCard = Hoc(Card);
+
+  // const dispatch=useDispatch();
 
   useEffect(() => {
     fetchData();
@@ -53,6 +58,18 @@ const UseEffect = () => {
     setJobValue(json);
     setFilteredSearch(json);
   };
+
+  
+ // subscribing to the store.
+
+  const Users=useSelector((store)=>store.users.users);
+  console.log(Users);
+
+  const onlineStatus = useOnlineStatus();
+
+  if (onlineStatus === false) {
+    return <h1>You are offline!!</h1>;
+  }
 
   return (
     <>
@@ -79,7 +96,13 @@ const UseEffect = () => {
       </div>
       <div className="container gap-2 p-2">
         {filteredSearch.map((val) => (
-         <Card key={val.id} info={val} />  // anchor tag reload the page but link don,t
+          <Link to={"/about"}>
+            {val.promoted ? (
+              <Card info={val} key={val.id} />
+            ) : (
+              <PromotedCard info={val} />
+            )}
+          </Link>
         ))}
       </div>
     </>
