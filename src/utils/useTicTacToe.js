@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Confetti from 'react-confetti'
 
 const InitialBoard = () => Array(9).fill(null);
 

@@ -10,6 +10,7 @@ import Body from "./components/Body";
 import Courasel from "./components/Ep-2/courasel";
 import GridBox from "./components/Ep-2/GridBox";
 import TicTacToe from "./components/Ep-2/TicTacToe";
+import Todo from "./components/Ep-2/Todo";
 
 // createBrowser router take a config as a list of objects that define a path and what should happen on that path.
 // routerProvider provide this configuration to whole application.
@@ -39,7 +40,11 @@ const appRouter = createBrowserRouter([
       {
         path:"/tic",
         element:<TicTacToe />,
-      }
+      },
+      {
+        path:"/todo",
+        element:<Todo />,
+      },
     ],
   },
 ]);
