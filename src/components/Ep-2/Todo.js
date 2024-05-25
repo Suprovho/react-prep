@@ -51,7 +51,7 @@ const Todo = () => {
                 type="text"
                 value={updatedText}
                 onChange={(e) => setUpdatedText(e.target.value)}
-                className="p-2"
+                className="p-2 border-2 border-solid border-black"
               />
             ) : (
               <li className="font-medium text-xl">{item.itemName}</li>
