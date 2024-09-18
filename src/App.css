@@ -108,3 +108,11 @@
     background-color: #000;
     color: #f0f0f0;
   }
+
+  .progress{
+    background-color: #00c251;
+    color: #fff;
+    height: 100%;
+    text-align: center;
+  }
+  
