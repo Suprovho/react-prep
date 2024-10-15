@@ -15,6 +15,12 @@ import ProgressBarM from "./components/Ep-2/ProgressBarM";
 import InfiniteScroll from "./components/Ep-2/infiniteScroll";
 import Emicalc from "./components/Ep-2/emiCalc";
 import Unkown from "./components/Ep-2/unkown";
+import TrelloBoard from "./components/Ep-2/TrelloBoard";
+import Output from "./components/Ep-2/outputQ";
+import Train from "./components/Ep-2/Train";
+import OutputQ2 from "./components/Ep-2/outputQ2";
+import Ep1 from "./components/machinecoding/ep1";
+import Ep2 from "./components/machinecoding/ep2";
 
 // createBrowser router take a config as a list of objects that define a path and what should happen on that path.
 // routerProvider provide this configuration to whole application.
@@ -64,6 +70,30 @@ const appRouter = createBrowserRouter([
       {
         path:"/album",
         element:<Unkown />,
+      },
+      {
+        path:"/board",
+        element:<TrelloBoard/>,
+      },
+      {
+        path:"/output",
+        element:<Output />
+      },
+      {
+        path:"/train",
+        element:<Train />,
+      },
+      {
+        path:"/output2",
+        element:<OutputQ2 />,
+      },
+      {
+        path:"/output3",
+        element:<Ep1 />
+      },
+      {
+        element:"/output4",
+        path:<Ep2 />
       }
     ],
   },

@@ -1,0 +1,3 @@
+what happen if we made an api call directly using async function inside use effect ?
+
+=> we cant make asynchronous call inside use effect its made for synchronous calls and async function return a promise ...
