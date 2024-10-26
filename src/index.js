@@ -20,7 +20,8 @@ import Output from "./components/Ep-2/outputQ";
 import Train from "./components/Ep-2/Train";
 import OutputQ2 from "./components/Ep-2/outputQ2";
 import Ep1 from "./components/machinecoding/ep1";
-import Ep2 from "./components/machinecoding/ep2";
+import Ticket from "./components/machinecoding/Ticket";
+import Gift from "./components/machinecoding/Gift";
 
 // createBrowser router take a config as a list of objects that define a path and what should happen on that path.
 // routerProvider provide this configuration to whole application.
@@ -89,12 +90,17 @@ const appRouter = createBrowserRouter([
       },
       {
         path:"/output3",
-        element:<Ep1 />
+        element:<Ep1 />,
       },
       {
-        element:"/output4",
-        path:<Ep2 />
-      }
+        path:"/ticket",
+        element:<Ticket />,
+      },
+
+      {
+        path:"/gift",
+        element:<Gift />,
+      },
     ],
   },
 ]);
