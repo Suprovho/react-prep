@@ -21,7 +21,7 @@ const Gift = () => {
       const assignGift = friendData.map((friend) => {
         const Random = Math.floor(Math.random() * items.length);
         const RandomGift = items[Random];
-        return { friend, gift: RandomGift }; // new es6 notation if value and key name are same we can add like this friend
+        return { friend: friend, gift: RandomGift }; // new es6 notation if value and key name are same we can add like this friend
       });
       setGift(assignGift);
       setAssign(true);
@@ -74,7 +74,9 @@ const Gift = () => {
             <>
               <h3 className="" key={friend}>
                 {friend}-
-                {gift.length > 0 && gift[index] && gift[index].gift  ? gift[index].gift : "No gift assigned"}
+                {gift.length > 0 && gift[index] && gift[index].gift
+                  ? gift[index].gift
+                  : "No gift assigned"}
                 <span
                   className="ml-2 cursor-pointer"
                   onClick={() => handelFriendsData(index)}

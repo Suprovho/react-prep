@@ -22,6 +22,8 @@ import OutputQ2 from "./components/Ep-2/outputQ2";
 import Ep1 from "./components/machinecoding/ep1";
 import Ticket from "./components/machinecoding/Ticket";
 import Gift from "./components/machinecoding/Gift";
+import Memo from "./components/Ep-2/memo";
+import Star from "./components/machinecoding/Star";
 
 // createBrowser router take a config as a list of objects that define a path and what should happen on that path.
 // routerProvider provide this configuration to whole application.
@@ -34,82 +36,86 @@ const appRouter = createBrowserRouter([
     children: [
       {
         path: "/",
-        element:<Body />,
+        element: <Body />,
       },
       {
         path: "/about",
         element: <About />,
       },
       {
-        path:"/contact",
-        element:<Courasel />,
+        path: "/contact",
+        element: <Courasel />,
       },
       {
-        path:"/grid",
-        element:<GridBox />,
+        path: "/grid",
+        element: <GridBox />,
       },
       {
-        path:"/tic",
-        element:<TicTacToe />,
+        path: "/tic",
+        element: <TicTacToe />,
       },
       {
-        path:"/todo",
-        element:<Todo />,
+        path: "/todo",
+        element: <Todo />,
       },
       {
-        path:"/progress",
-        element:<ProgressBarM />,
+        path: "/progress",
+        element: <ProgressBarM />,
       },
       {
-       path:"/infinite",
-       element:<InfiniteScroll />,
+        path: "/infinite",
+        element: <InfiniteScroll />,
       },
       {
-       path:"/emi",
-       element:<Emicalc />,
+        path: "/emi",
+        element: <Emicalc />,
       },
       {
-        path:"/album",
-        element:<Unkown />,
+        path: "/album",
+        element: <Unkown />,
       },
       {
-        path:"/board",
-        element:<TrelloBoard/>,
+        path: "/board",
+        element: <TrelloBoard />,
       },
       {
-        path:"/output",
-        element:<Output />
+        path: "/output",
+        element: <Output />,
       },
       {
-        path:"/train",
-        element:<Train />,
+        path: "/train",
+        element: <Train />,
       },
       {
-        path:"/output2",
-        element:<OutputQ2 />,
+        path: "/output2",
+        element: <OutputQ2 />,
       },
       {
-        path:"/output3",
-        element:<Ep1 />,
+        path: "/output3",
+        element: <Ep1 />,
       },
       {
-        path:"/ticket",
-        element:<Ticket />,
+        path: "/ticket",
+        element: <Ticket />,
       },
 
       {
-        path:"/gift",
-        element:<Gift />,
+        path: "/gift",
+        element: <Gift />,
       },
+      {
+        path: "/memo",
+        element: <Memo />,
+      },
+      {
+        path:"/star",
+        element:<Star />,
+      }
     ],
   },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <React.StrictMode>
-    <RouterProvider router={appRouter} />
-  </React.StrictMode>
-);
+root.render(<RouterProvider router={appRouter} />);
 
 reportWebVitals();
