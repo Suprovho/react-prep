@@ -9,13 +9,18 @@ const Ep1 = () => {
   ]);
 
   const handelCheck = (index) => {
-    data[index].selected = !data[index].selected;
-    setData([...data]);
+    setData((prevData) => {
+      const updatedData = [...prevData];
+      updatedData[index] = { ...updatedData[index], selected: !updatedData[index].selected }; // another way but logic is same.
+      return updatedData;
+    });
   };
 
   const handelDelete = (index) => {
     data.splice(index,1);
-    setData([...data]); //shallow copy. to make changes that are done
+    setData([...data]); 
+    //shallow copy. to make changes that are done without doing this then react will point to old reference.
+    //This shallow copy ensures that setData is working with a "new" array reference, triggering a re-render
   };
 
   return (

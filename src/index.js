@@ -24,6 +24,7 @@ import Ticket from "./components/machinecoding/Ticket";
 import Gift from "./components/machinecoding/Gift";
 import Memo from "./components/Ep-2/memo";
 import Star from "./components/machinecoding/Star";
+import TabComponent from "./components/machinecoding/Tabs";
 
 // createBrowser router take a config as a list of objects that define a path and what should happen on that path.
 // routerProvider provide this configuration to whole application.
@@ -110,7 +111,11 @@ const appRouter = createBrowserRouter([
       {
         path:"/star",
         element:<Star />,
-      }
+      },
+      {
+        path:"/tab",
+        element:<TabComponent />,
+      },
     ],
   },
 ]);
