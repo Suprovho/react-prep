@@ -84,3 +84,5 @@ export const img = [
     }
     return num - 1;
    }
+
+   

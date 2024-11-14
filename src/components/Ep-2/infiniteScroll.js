@@ -33,7 +33,7 @@ const InfiniteScroll = () => {
   useEffect(() => {
     window.addEventListener("scroll", handelScroll);
     return () => window.removeEventListener("scroll", handelScroll);
-  }, []);
+  }, [isLoading]);
 
   return (
     <div className="p-2 mt-4">

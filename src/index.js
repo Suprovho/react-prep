@@ -25,6 +25,8 @@ import Gift from "./components/machinecoding/Gift";
 import Memo from "./components/Ep-2/memo";
 import Star from "./components/machinecoding/Star";
 import TabComponent from "./components/machinecoding/Tabs";
+import FileEx from "./components/machinecoding/fileExplorer";
+import CommentSection from "./components/machinecoding/nested-comment/CommentSection";
 
 // createBrowser router take a config as a list of objects that define a path and what should happen on that path.
 // routerProvider provide this configuration to whole application.
@@ -115,6 +117,14 @@ const appRouter = createBrowserRouter([
       {
         path:"/tab",
         element:<TabComponent />,
+      },
+      {
+        path:"/file",
+        element:<FileEx />,
+      },
+      {
+        path:"/comment",
+        element:<CommentSection />,
       },
     ],
   },

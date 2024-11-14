@@ -19,7 +19,7 @@ const handelCheck = (index) => {
 setData((prevData) => {
 const updatedData = [...prevData];
 updatedData[index] = { ...updatedData[index], selected: !updatedData[index].selected }; // another way but logic is same.
-return updatedData;
+return updatedData;       
 });
 };
 

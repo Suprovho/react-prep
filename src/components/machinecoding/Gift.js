@@ -34,7 +34,7 @@ const Gift = () => {
     const assignGift = friendData.map((friend) => {
       const Random = Math.floor(Math.random() * items.length);
       const RandomGift = items[Random];
-      return { ...friend , gift: RandomGift };
+      return { ...friend, gift: RandomGift };
     });
     setGift(assignGift);
   };
