@@ -27,6 +27,9 @@ import Star from "./components/machinecoding/Star";
 import TabComponent from "./components/machinecoding/Tabs";
 import FileEx from "./components/machinecoding/fileExplorer";
 import CommentSection from "./components/machinecoding/nested-comment/CommentSection";
+import Cart from "./components/ECart.js/Cart";
+import Home from "./components/ECart.js/Home";
+import Ecart from "./components/ECart.js/Ecart";
 
 // createBrowser router take a config as a list of objects that define a path and what should happen on that path.
 // routerProvider provide this configuration to whole application.
@@ -111,20 +114,34 @@ const appRouter = createBrowserRouter([
         element: <Memo />,
       },
       {
-        path:"/star",
-        element:<Star />,
+        path: "/star",
+        element: <Star />,
       },
       {
-        path:"/tab",
-        element:<TabComponent />,
+        path: "/tab",
+        element: <TabComponent />,
       },
       {
-        path:"/file",
-        element:<FileEx />,
+        path: "/file",
+        element: <FileEx />,
       },
       {
-        path:"/comment",
-        element:<CommentSection />,
+        path: "/comment",
+        element: <CommentSection />,
+      },
+      {
+        path: "/Ecart",
+        element: <Ecart />,
+        children: [
+          {
+            path:"/Ecart",
+            element:<Home />,
+          },
+          {
+            path: "cart",
+            element: <Cart />,
+          },
+        ],
       },
     ],
   },

@@ -180,3 +180,17 @@
   border-left: 1px solid grey;
   margin-top: 0.5rem;
 }
+
+.filters {
+  background-color: #343a40;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  height: 86vh;
+}
+
+.summary {
+  width: 25%;
+}
