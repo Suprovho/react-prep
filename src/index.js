@@ -30,6 +30,7 @@ import CommentSection from "./components/machinecoding/nested-comment/CommentSec
 import Cart from "./components/ECart.js/Cart";
 import Home from "./components/ECart.js/Home";
 import Ecart from "./components/ECart.js/Ecart";
+import Form from "./components/machinecoding/form/Form";
 
 // createBrowser router take a config as a list of objects that define a path and what should happen on that path.
 // routerProvider provide this configuration to whole application.
@@ -142,6 +143,10 @@ const appRouter = createBrowserRouter([
             element: <Cart />,
           },
         ],
+      },
+      {
+        path:"/form",
+        element:<Form />,
       },
     ],
   },
