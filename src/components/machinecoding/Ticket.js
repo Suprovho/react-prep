@@ -38,7 +38,7 @@ const Ticket = () => {
     return userSeat[`${category}-${row}-${col}`];
   };
 
-  const confirmBooking = () => {
+  const confirmBooking = () => { 
     const finalSeat = Object.keys(userSeat)
       .map((e) => e.split(","))
       .join(", ");

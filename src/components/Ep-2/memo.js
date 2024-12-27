@@ -84,7 +84,6 @@ const Memo = () => {
             ref.current = ref.current + 1;
             console.log("ref=", ref.current);
           }}
-
           className="border-2 border-solid border-black p-2 rounded-lg m-4"
         >
           increase ref

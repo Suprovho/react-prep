@@ -7,11 +7,11 @@ const Todo = () => {
   const [updatedText, setUpdatedText] = useState(null);
 
   const addItem = () => {
-    const newItem={
-        id:new Date().getTime(),
-        itemName:text
-    }
-    setList([...list,newItem]);
+    const newItem = {
+      id: new Date().getTime(),
+      itemName: text,
+    };
+    setList([...list, newItem]);
     setText("");
   };
 
@@ -20,15 +20,15 @@ const Todo = () => {
   };
 
   const updateItem = (id) => {
-    const NewList=[...list].map((item)=>{
-        if (item.id===id) {
-            item.itemName=updatedText;
-        }
-        return item;
-    })
-    setList(NewList)
+    const NewList = [...list].map((item) => {
+      if (item.id === id) {
+        item.itemName = updatedText;
+      }
+      return item;
+    });
+    setList(NewList);
     setEditingText("");
-    setUpdatedText("")
+    setUpdatedText("");
   };
 
   return (
@@ -40,7 +40,10 @@ const Todo = () => {
         onChange={(e) => setText(e.target.value)}
         className="w-[30%] p-2 border-2 border-solid border-black"
       />
-      <button className="border-2 border-solid border-black p-1 rounded-md" onClick={addItem}>
+      <button
+        className="border-2 border-solid border-black p-1 rounded-md"
+        onClick={addItem}
+      >
         Add
       </button>
       {list &&
@@ -56,11 +59,26 @@ const Todo = () => {
             ) : (
               <li className="font-medium text-xl">{item.itemName}</li>
             )}
-            <button onClick={() => deleteItem(item.id)} className="p-1 border-2 border-solid border-black rounded-md">Delete</button>
+            <button
+              onClick={() => deleteItem(item.id)}
+              className="p-1 border-2 border-solid border-black rounded-md"
+            >
+              Delete
+            </button>
             {editingText === item.id ? (
-              <button onClick={() => updateItem(item.id)} className="p-1 border-2 border-solid border-black rounded-md">Update</button>
+              <button
+                onClick={() => updateItem(item.id)}
+                className="p-1 border-2 border-solid border-black rounded-md"
+              >
+                Update
+              </button>
             ) : (
-              <button onClick={() => setEditingText(item.id)} className="p-1 border-2 border-solid border-black rounded-md">Edit</button>
+              <button
+                onClick={() => setEditingText(item.id)}
+                className="p-1 border-2 border-solid border-black rounded-md"
+              >
+                Edit
+              </button>
             )}
           </div>
         ))}

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Shimmer from "./Shimmer";
 
 const data = [
   {

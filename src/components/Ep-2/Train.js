@@ -12,24 +12,27 @@ const Train = () => {
   };
 
   const handleSeatBooking = (selectedTrainId, seatIndex) => {
-    setData((prevData) => // line fix.. prev we were no returning properly
-      prevData.map((train) => {
-        if (train.trainId === selectedTrainId) {
-          const updatedSeats = train.seats.map((seat, index) => {
-            if (index === seatIndex && !seat.isBooked && !seat.isPWD) {
-              return { ...seat, isBooked: true };
-            }
-            return seat;
-          });
+    setData(
+      (
+        prevData // line fix.. prev we were no returning properly
+      ) =>
+        prevData.map((train) => {
+          if (train.trainId === selectedTrainId) {
+            const updatedSeats = train.seats.map((seat, index) => {
+              if (index === seatIndex && !seat.isBooked && !seat.isPWD) {
+                return { ...seat, isBooked: true };
+              }
+              return seat;
+            });
 
-          return {
-            ...train,
-            seats: updatedSeats,
-            availableSeats: train.availableSeats - 1,
-          };
-        }
-        return train;
-      })
+            return {
+              ...train,
+              seats: updatedSeats,
+              availableSeats: train.availableSeats - 1,
+            };
+          }
+          return train;
+        })
     );
   };
 
@@ -71,7 +74,9 @@ const Train = () => {
             </li>
           ))
         ) : (
-          <h1 className="text-red-600 font-bold">No trains available on this date</h1>
+          <h1 className="text-red-600 font-bold">
+            No trains available on this date
+          </h1>
         )}
       </ul>
 
@@ -95,7 +100,9 @@ const Train = () => {
                   }`}
                   key={index}
                   onClick={() =>
-                    !seat.isBooked && !seat.isPWD && handleSeatBooking(selectedTrain, index)
+                    !seat.isBooked &&
+                    !seat.isPWD &&
+                    handleSeatBooking(selectedTrain, index)
                   }
                 >
                   {seat.isBooked ? "X" : seat.isPWD ? "PWD" : "O"}
