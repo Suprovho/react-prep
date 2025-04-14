@@ -31,3 +31,4 @@ setData([...data]); // shallow copy. to make changes that are done without doing
 ```
 
 
+# IF U WANT THE UI THAT APPEARS ON LOAD CHANGES DYNAMICALLY THE THE DATA SHOULD BE IN USE STATE SUCH AS TIC TAC TOE,ETC

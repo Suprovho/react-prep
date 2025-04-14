@@ -31,6 +31,7 @@ import Cart from "./components/ECart.js/Cart";
 import Home from "./components/ECart.js/Home";
 import Ecart from "./components/ECart.js/Ecart";
 import Form from "./components/machinecoding/form/Form";
+import TicTacToeM from "./components/machinecoding/TicTacToeM";
 
 // createBrowser router take a config as a list of objects that define a path and what should happen on that path.
 // routerProvider provide this configuration to whole application.
@@ -135,8 +136,8 @@ const appRouter = createBrowserRouter([
         element: <Ecart />,
         children: [
           {
-            path:"/Ecart",
-            element:<Home />,
+            path: "/Ecart",
+            element: <Home />,
           },
           {
             path: "cart",
@@ -145,8 +146,12 @@ const appRouter = createBrowserRouter([
         ],
       },
       {
-        path:"/form",
-        element:<Form />,
+        path: "/form",
+        element: <Form />,
+      },
+      {
+        path: "/tictac",
+        element: <TicTacToeM />,
       },
     ],
   },
